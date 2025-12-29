@@ -5235,3 +5235,51 @@ background-color: transparent;
         font-size: 14px;
     }
 }
+
+/* About Section Mobile Layout Fix */
+@media only screen and (max-width: 768px) {
+    /* Reorder columns for mobile: Image first, then text, then about_right_1.png */
+    .section#section1 .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* About image (first on mobile) */
+    .section#section1 .wrap-teardrop {
+        order: 1;
+        min-height: 300px;
+    }
+    
+    /* Text content (second on mobile) */
+    .section#section1 .col-md-push-4 {
+        order: 2;
+        padding: 30px 20px !important;
+    }
+    
+    /* about_right_1.png (third on mobile) */
+    .section#section1 .new-about-bg {
+        order: 3;
+        min-height: 300px;
+        display: block !important;
+    }
+    
+    /* Ensure about_right_1.png is visible on mobile */
+    .section#section1 .new-about-bg .all-bg {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        min-height: 300px;
+        background-image: url('../img/about/about_right_1.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    /* Remove push/pull on mobile */
+    .section#section1 .col-md-push-4,
+    .section#section1 .col-md-pull-4 {
+        position: relative;
+        left: auto;
+        right: auto;
+    }
+}
