@@ -5283,3 +5283,38 @@ background-color: transparent;
         right: auto;
     }
 }
+
+/* Contact Section Mobile Layout Fix */
+@media only screen and (max-width: 768px) {
+    /* Reorder columns for mobile: Contact image first, then Follow Us, then Red Flag logo */
+    .section#section4 .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Contact image (first on mobile) */
+    .section#section4 .wrap-teardrop {
+        order: 1;
+        min-height: 300px;
+    }
+    
+    /* Follow Us section (second on mobile) */
+    .section#section4 .col-md-push-4 {
+        order: 2;
+        padding: 30px 20px !important;
+    }
+    
+    /* Red Flag logo section (third on mobile) */
+    .section#section4 .element-color-switch-4 {
+        order: 3;
+        display: block !important;
+    }
+    
+    /* Remove push/pull on mobile */
+    .section#section4 .col-md-push-4,
+    .section#section4 .col-md-pull-4 {
+        position: relative;
+        left: auto;
+        right: auto;
+    }
+}
