@@ -1,5 +1,6 @@
 /* Import the original styles */
-@import '../css/plugins.css';
+/* Temporarily disabled plugins.css due to missing icon files */
+/* @import '../css/plugins.css'; */
 @import '../css/style.css';
 
 :root {
