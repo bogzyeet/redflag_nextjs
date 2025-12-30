@@ -1,0 +1,55 @@
+/* Import the original styles */
+@import '../css/plugins.css';
+@import '../css/style.css';
+
+:root {
+  --font-raleway: 'Raleway', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-racing: 'Racing Sans One', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-poppins);
+}
+
+/* Performance optimizations */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure lazy-loaded videos don't cause layout shift */
+video[data-src] {
+  background-color: #000;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
